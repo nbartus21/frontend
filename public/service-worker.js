@@ -14,6 +14,6 @@ self.addEventListener('push', function(event) {
   self.addEventListener('notificationclick', function(event) {
     event.notification.close();
     event.waitUntil(
-      self.clients.openWindow('http://localhost:5173/admin')
+      self.clients.openWindow('http://https://backend-kkeo.onrender.com/admin')
     );
   });

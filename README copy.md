@@ -130,7 +130,7 @@ Key directories and files:
    npm run dev
    ```
 
-3. Access the application in your browser at `http://localhost:5173`
+3. Access the application in your browser at `http://https://backend-kkeo.onrender.com`
 
 ## Detailed Feature Explanation
 
