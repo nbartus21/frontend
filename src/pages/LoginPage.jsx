@@ -29,7 +29,7 @@ const LoginPage = () => {
     if (!validateForm()) return;
 
     try {
-      const response = await fetch('http://localhost:8080/api/auth/login', {
+      const response = await fetch('https://backend-kkeo.onrender.com/api/auth/login', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ email, password }),

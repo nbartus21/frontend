@@ -7,7 +7,7 @@ export const CartProvider = ({ children }) => {
 
   const addToCart = async (menuItem, quantity = 1) => {
     try {
-      const response = await fetch('http://localhost:8080/api/cart/add', {
+      const response = await fetch('https://backend-kkeo.onrender.com/api/cart/add', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -24,7 +24,7 @@ export const CartProvider = ({ children }) => {
 
   const removeFromCart = async (menuItemId, quantity = 1) => {
     try {
-      const response = await fetch(`http://localhost:8080/api/cart/remove/${menuItemId}`, {
+      const response = await fetch(`https://backend-kkeo.onrender.com/api/cart/remove/${menuItemId}`, {
         method: 'DELETE',
         headers: {
           'Content-Type': 'application/json',
@@ -41,7 +41,7 @@ export const CartProvider = ({ children }) => {
 
   const fetchCart = useCallback(async () => {
     try {
-      const response = await fetch('http://localhost:8080/api/cart', {
+      const response = await fetch('https://backend-kkeo.onrender.com/api/cart', {
         headers: {
           'x-auth-token': localStorage.getItem('token'),
         },

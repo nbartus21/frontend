@@ -55,7 +55,7 @@ export default function EnhancedReservationPage() {
   useEffect(() => {
    if(selectedDate && selectedTime){
     const fetchBookedTables = async () => {
-      const response = await api.get(`http://localhost:8080/api/reservations/booked?date=${selectedDate}&time=${selectedTime}`)
+      const response = await api.get(`https://backend-kkeo.onrender.com/api/reservations/booked?date=${selectedDate}&time=${selectedTime}`)
       if (response.status === 200) {
         if(response.data.length > 0){
          const bookedTables = response.data.map((reservation) => {
@@ -109,7 +109,7 @@ const handleReservation = async () => {
   if (selectedTable && selectedDate && selectedTime) {
     setLoading(true)
     try {
-      const response = await api.post('http://localhost:8080/api/reservations/create-checkout-session', {
+      const response = await api.post('https://backend-kkeo.onrender.com/api/reservations/create-checkout-session', {
         tableNumber: selectedTable,
         date: selectedDate,
         bookingTime: selectedTime,

@@ -40,7 +40,7 @@ export default function MenuPage() {
     try {
       setCheckoutLoading(true)
       const response = await fetch(
-        "http://localhost:8080/api/checkout/create-checkout-session",
+        "https://backend-kkeo.onrender.com/api/checkout/create-checkout-session",
         {
           method: "POST",
           headers: {
@@ -97,7 +97,7 @@ export default function MenuPage() {
       setLoading(true);
       try {
         const response = await fetch(
-          "http://localhost:8080/api/menu/getAll"
+          "https://backend-kkeo.onrender.com/api/menu/getAll"
         );
         const data = await response.json();
         setAllMenuItems(data);

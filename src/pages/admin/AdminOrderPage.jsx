@@ -25,7 +25,7 @@ const AdminOrderPage = () => {
 
   const fetchOrders = async () => {
     try {
-      const response = await fetch("http://localhost:8080/api/order/all", {
+      const response = await fetch("https://backend-kkeo.onrender.com/api/order/all", {
         headers: {
           "x-auth-token": token,
         },
@@ -47,7 +47,7 @@ const AdminOrderPage = () => {
   const handleStatusChange = async (orderId) => {
     try {
       const response = await fetch(
-        `http://localhost:8080/api/order/${orderId}/status`,
+        `https://backend-kkeo.onrender.com/api/order/${orderId}/status`,
         {
           method: "PATCH",
           headers: {
@@ -79,7 +79,7 @@ const AdminOrderPage = () => {
   };
   const handleDelete = async (id) => {
     try {
-      await fetch(`http://localhost:8080/api/order/${id}`, {
+      await fetch(`https://backend-kkeo.onrender.com/api/order/${id}`, {
         method: "DELETE",
         headers: {
           "x-auth-token": token,

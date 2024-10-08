@@ -25,7 +25,7 @@ const AdminMenuPage = () => {
 
   const fetchMenuItems = async () => {
     try {
-      const response = await fetch('http://localhost:8080/api/menu/getAll');
+      const response = await fetch('https://backend-kkeo.onrender.com/api/menu/getAll');
       const data = await response.json();
       setMenuItems(data);
       setLoading(false);
@@ -37,7 +37,7 @@ const AdminMenuPage = () => {
 
   const handleDelete = async (id) => {
     try {
-      await fetch(`http://localhost:8080/api/menu/delete/${id}`, {
+      await fetch(`https://backend-kkeo.onrender.com/api/menu/delete/${id}`, {
         method: 'DELETE',
         headers: {
           'x-auth-token': token
@@ -88,7 +88,7 @@ const AdminMenuPage = () => {
   const handleCreate = async (e) => {
     e.preventDefault();
     try {
-      const response = await fetch('http://localhost:8080/api/menu/create', {
+      const response = await fetch('https://backend-kkeo.onrender.com/api/menu/create', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -117,7 +117,7 @@ const AdminMenuPage = () => {
   const handleEdit = async (e) => {
     e.preventDefault();
     try {
-      const response = await fetch(`http://localhost:8080/api/menu/update/${editItem._id}`, {
+      const response = await fetch(`https://backend-kkeo.onrender.com/api/menu/update/${editItem._id}`, {
         method: 'PUT',
         headers: {
           'Content-Type': 'application/json',

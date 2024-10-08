@@ -33,7 +33,7 @@ export default function App() {
 
   const checkAdminStatus = async (token) => {
     try {
-      const response = await fetch('http://localhost:8080/api/auth/checkAdmin', {
+      const response = await fetch('https://backend-kkeo.onrender.com/api/auth/checkAdmin', {
         headers: {
           'x-auth-token': token
         }
